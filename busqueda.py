@@ -29,7 +29,10 @@ def createSolution(n,m):
     solution.extend(range(1, (n*m)+1))
     solution = reshape(solution,(n,m))
     return solution
-        
+
+def casePosition(n,m):
+    
+    
  
 def main():
     
@@ -38,8 +41,10 @@ def main():
   #solucion = createSolution(3,3)
   solucion = [1 ,2 ,3,4 ,5 ,6,7, 8, 0]
   #print (reshape(solucion,(3,3)))
+  i,j = numpy.where(estado_inicial==0)
+  casePosition(i,j)
   
-  print(numpy.where(estado_inicial==0))
+  print(i,j)
 
 if __name__ == '__main__':
     main()
