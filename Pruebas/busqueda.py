@@ -1,4 +1,3 @@
-#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
 Created on Wed Aug 29 19:26:28 2018
@@ -31,11 +30,10 @@ def createSolution(n,m):
     return solution
 
 def casePosition(n,m):
-    
+    print(n,m)
     
  
 def main():
-    
   estado_inicial =  createInitialParams(3,3)
   print (estado_inicial)
   #solucion = createSolution(3,3)
