@@ -47,4 +47,6 @@ class Solve:
                     openset.add(state)
             closed.add(current)
         else:
-            print('¡No se consiguió solucionar!',)
+            openset
+            end = time.time()
+            print('¡No se consiguió solucionar!', float(end - start))

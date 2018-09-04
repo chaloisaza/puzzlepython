@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class State:
     def __init__(self, values, moves=0, parent=None):
         self.values = values
@@ -29,6 +30,7 @@ class State:
     def score(self):
         return self._h() + self._g()
 
+    # heuristic
     def _h(self):
         return sum([1 if self.values[i] != self.goal[i] else 0 for i in range(8)])
 
@@ -47,6 +49,7 @@ class State:
     def __lt__(self, other):
         return self.score() < other.score()
 
+    # show the path to solution in console
     def __str__(self):
         return '\n'.join([str(self.values[:3]),
                           str(self.values[3:6]),
