@@ -11,7 +11,7 @@ class Solve:
         self.initial_state = State(initial_state)
 
         #array al que debe llegar pero no de cero a 8 sino de 1 a 0
-        self.goal = range(1, 9)
+        self.goal = list(range(1, 9))
 
     def _rebuildPath(self, end):
         path = [end]

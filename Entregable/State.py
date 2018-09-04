@@ -6,7 +6,7 @@ class State:
         self.values = values
         self.moves = moves
         self.parent = parent
-        self.goal = range(1, 9)
+        self.goal = list(range(1, 9))
 
     def possible_moves(self, moves):
         i = self.values.index(0)
@@ -32,7 +32,7 @@ class State:
 
     # heuristic
     def _h(self):
-        return sum([1 if self.values[i] != self.goal[i] else 0 for i in range(8)])
+        return sum([1 if self.values[i] != self.goal[i] else 0 for i in list(range(8))])
 
     def _g(self):
         return self.moves
